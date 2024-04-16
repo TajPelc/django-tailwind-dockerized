@@ -12,3 +12,27 @@ Features:
 - Plays nicely with the default styling of the /admin app, something I had to resolve.
 
 Feel free to modify as required to suit your needs.
+
+## Usage
+
+- Clone the repository
+
+#### Spin up the containers
+`docker-compose up -d`
+
+### manage.py proxy
+
+Because Django now runs in docker, you need to proxy commands to the docker instance. I created a handy script for that.
+
+`./django_manage.sh <command>`
+
+Example:
+
+`./django_manage migrate`
+
+#### Shell access
+
+`./open_shell.sh`
+
+## Bonus: Visual Studio Code: Dev Containers
+To get full access to code completion and the python interpreter, attach to the container once it's up to edit the Python code using Dev Containers.
