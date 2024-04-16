@@ -36,3 +36,7 @@ Example:
 
 ## Bonus: Visual Studio Code: Dev Containers
 To get full access to code completion and the python interpreter, attach to the container once it's up to edit the Python code using Dev Containers.
+
+![CleanShot 2024-04-16 at 16 23 08@2x](https://github.com/TajPelc/django-tailwind-dockerized/assets/1148546/96db32ac-ef7a-43f4-83b1-cc08bcbccafa)
+
+![CleanShot 2024-04-16 at 16 24 58@2x](https://github.com/TajPelc/django-tailwind-dockerized/assets/1148546/67a11f94-e77a-4328-aff6-dc275aab6e1d)
