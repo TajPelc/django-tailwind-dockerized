@@ -14,14 +14,4 @@ COPY app/static/ ../static
 RUN npm install
 
 # Command to compile CSS and watch for changes
-# CMD npx tailwindcss -i ../static/src/input.css -o ../static/src/output.css --watch
-# CMD ["npm", "run", "watch-css"]
-
-# CMD [ "sh", "-c", "npx", "tailwindcss", "-i", "../static/src/input.css", "-o", "../static/src/output.css", "--watch"]
-CMD [ "sh", "-c", "npx", "tailwindcss -i ../static/src/input.css -o ../static/src/output.css --watch > /usr/src/static/tailwind-output.log 2>&1"]
-
-RUN npx update-browserslist-db@latest
-
 CMD ["npx", "tailwindcss", "-i", "../static/src/input.css", "-o", "../static/src/output.css", "--watch"]
-
-# CMD tail -f /dev/null
