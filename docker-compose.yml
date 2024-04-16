@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  django:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    restart: unless-stopped
+    volumes:
+      - ./app:/app
+    ports:
+      - 8000:8000
+
+  tailwindcss:
+    build:
+      context: .
+      dockerfile: Dockerfile.tailwind
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./tailwind:/usr/src/app
+      - ./app/static:/usr/src/static
+      - ./app/templates:/usr/src/templates
+    environment:
+      - NODE_ENV=development

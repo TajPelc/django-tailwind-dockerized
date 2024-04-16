@@ -1,0 +1,15 @@
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### Django ###
+app/*.log
+app/*.pot
+app/*.pyc
+app/__pycache__/
+app/local_settings.py
+app/staticfiles/cache
+
+app/.env
+app/db.sqlite3
